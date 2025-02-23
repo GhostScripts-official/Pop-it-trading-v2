@@ -2,10 +2,9 @@ local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-local pickupRange = 10 -- Радиус подбора предметов
-
+local pickupRange = 10 
 while true do
-    task.wait(0.5) -- Ожидание перед каждой проверкой
+    task.wait(0.5)
 
     for _, item in pairs(workspace:GetChildren()) do
         if item:IsA("Model") and item:FindFirstChild("Handle") then
